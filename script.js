@@ -1,3 +1,4 @@
+console.log('***** Lessons *****');
 // ********** VALUES AND VARIABLES ********** //
 // Variable declaration: let, const and var
 // let: variables that can be changed (mutable) [block scoupe]
