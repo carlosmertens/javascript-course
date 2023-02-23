@@ -59,28 +59,28 @@ x++; // x = x + 1
 //
 
 // NUMBERS: "floating point numbers" -> use for decimals and integers
-let age = 23;
+let age = 20;
 let height = 1.65;
 
 // STRING: use for text
-let message = 'Hello world!';
+// let message = 'Hello world!';
 // console.log(typeof message);
 
 // String concatenation:
-const carlos =
-  "I'm " + firstName + ', a ' + (currentYear - birthYear) + ' years old ' + job;
-console.log(carlos);
+// const carlos =
+//   "I'm " + firstName + ', a ' + (currentYear - birthYear) + ' years old ' + job;
+// console.log(carlos);
 
 // Template literals (template strings):
-const mertens = `I'm ${lastName}, a ${
-  currentYear - birthYear
-} years old ${job}`;
-console.log({ mertens });
+// const mertens = `I'm ${lastName}, a ${
+//   currentYear - birthYear
+// } years old ${job}`;
+// console.log({ mertens });
 
-console.log(`String with \nnew line \nusing especial character`);
-console.log(`String with
-new line
-using template literal`);
+// console.log(`String with \nnew line \nusing especial character`);
+// console.log(`String with
+// new line
+// using template literal`);
 
 // BOOLEAN: logical type that can be true or false
 let ageOverLimit = true;
@@ -103,3 +103,23 @@ ageOverLimit = 21;
 // console.log(typeof ageOverLimit);
 
 // OBJECT DATA TYPES
+
+// ********* IF / ELSE STATEMENTS ********** //
+// known as "if else control structure"
+
+const oldEnough = age >= ageOverLimit;
+if (oldEnough) {
+  console.log('Old enough, Welcome!!! 🍸');
+} else {
+  const yearsBack = ageOverLimit - age;
+  console.log(`Not old enough, comeback in ${yearsBack} year 🥳`);
+}
+
+let century;
+if (birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+
+console.log(century);
