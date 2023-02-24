@@ -1,5 +1,5 @@
 console.log('***** Lessons *****');
-// ********** VALUES AND VARIABLES ********** //
+/* ********** VALUES AND VARIABLES ********** */
 // Variable declaration: let, const and var
 // let: variables that can be changed (mutable) [block scoupe]
 // underscore and dollar sign are only allowed characters in variables
@@ -19,7 +19,7 @@ const PI = 3.1416;
 var job = 'waiter';
 job = 'programmer';
 
-// ********** OPERATORS ********** //
+/* ********** OPERATORS ********** */
 // types: mathematic, comparison, logical, assignment, etc
 
 // MATHEMATIC
@@ -27,7 +27,7 @@ job = 'programmer';
 let currentYear = 2023;
 // console.log(currentYear - birthYear);
 // console.log(40 + 8 + 23 - 10);
-// console.log(2 ** 3)
+// console.log(2 ** 3);
 
 // plus sign can use to concatenate String
 // console.log(firstName + ' ' + js);
@@ -35,13 +35,13 @@ let currentYear = 2023;
 // COMPARISON
 // use to create boolean values with (>, <, >=, <=)
 // if (js === 'amazing') alert('Javascript is FUN!');
-if (js === 'amazing') console.log('Javascript is FUN!');
+// if (js === 'amazing') console.log('Javascript is FUN!');
 
 // ASSIGNMENT
 // equal operator: it is execute after the value assignment
 let x = 10 + 5; // 15, equal operator will assign the value after the sum
 
-// x = x + 5
+x = x + 5;
 x += 5; // 20, can be use with any arithmetic operator
 
 x++; // x = x + 1
@@ -49,7 +49,7 @@ x++; // x = x + 1
 // OPERATOR PRECEDENCE
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
 
-// ********** DATA TYPES ********** //
+/* ********** DATA TYPES ********** */
 // typeof: an operator to read the type of the value
 
 // PRIMITIVE DATA TYPES
@@ -63,18 +63,18 @@ let age = 20;
 let height = 1.65;
 
 // STRING: use for text
-// let message = 'Hello world!';
+let message = 'Hello world!';
 // console.log(typeof message);
 
 // String concatenation:
-// const carlos =
-//   "I'm " + firstName + ', a ' + (currentYear - birthYear) + ' years old ' + job;
+const carlos =
+  "I'm " + firstName + ', a ' + (currentYear - birthYear) + ' years old ' + job;
 // console.log(carlos);
 
 // Template literals (template strings):
-// const mertens = `I'm ${lastName}, a ${
-//   currentYear - birthYear
-// } years old ${job}`;
+const mertens = `I'm ${lastName}, a ${
+  currentYear - birthYear
+} years old ${job}`;
 // console.log({ mertens });
 
 // console.log(`String with \nnew line \nusing especial character`);
@@ -82,9 +82,29 @@ let height = 1.65;
 // new line
 // using template literal`);
 
+// TYPE CONVERTION
+// Convertion string to number using function Number()
+const inputYear = '1990';
+// console.log(inputYear + 18);
+// console.log(Number(inputYear) + 18);
+// console.log(Number('12D')); // will return NaN (Not a Number)
+// console.log(typeof NaN); // NaN type is number
+
+// Convertion number to string using function String()
+// console.log(typeof String(2000));
+
+// TYPE COERCION
+// JS convert in the back number to string with the + operator
+// console.log('I am ' + 43 + ' years old!');
+// console.log(43 - '2' - '1');
+// console.log('25' * '2');
+
 // BOOLEAN: logical type that can be true or false
 let ageOverLimit = true;
 // console.log(typeof ageOverLimit);
+
+// FALSY VALUES (5): 0, '', undefined, null and NaN
+// console.log(Boolean(NaN)); // try it
 
 // UNDEFINED: use for variavle value that is not yet defined
 let children;
@@ -104,22 +124,36 @@ ageOverLimit = 21;
 
 // OBJECT DATA TYPES
 
-// ********* IF / ELSE STATEMENTS ********** //
+/* ********* IF / ELSE STATEMENTS ********** */
 // known as "if else control structure"
 
-const oldEnough = age >= ageOverLimit;
-if (oldEnough) {
-  console.log('Old enough, Welcome!!! 🍸');
-} else {
-  const yearsBack = ageOverLimit - age;
-  console.log(`Not old enough, comeback in ${yearsBack} year 🥳`);
-}
+// const oldEnough = age >= ageOverLimit;
+// if (oldEnough) {
+//   console.log('Old enough, Welcome!!! 🍸');
+// } else {
+//   const yearsBack = ageOverLimit - age;
+//   console.log(`Not old enough, comeback in ${yearsBack} year 🥳`);
+// }
 
-let century;
-if (birthYear <= 2000) {
-  century = 20;
-} else {
-  century = 21;
-}
+// let century;
+// if (birthYear <= 2000) {
+//   century = 20;
+// } else {
+//   century = 21;
+// }
+// console.log(century);
 
-console.log(century);
+// Falsy type coersion
+// const money = 0;
+// if (money) {
+//   console.log('Do not spen it all!');
+// } else {
+//   console.log('You have no money!');
+// }
+
+// let transfer;
+// if (transfer) {
+//   console.log('transfer is define');
+// } else {
+//   console.log('transfer is undefined');
+// }
