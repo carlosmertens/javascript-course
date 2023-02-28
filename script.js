@@ -37,6 +37,16 @@ let currentYear = 2023;
 // if (js === 'amazing') alert('Javascript is FUN!');
 // if (js === 'amazing') console.log('Javascript is FUN!');
 
+// Equality operators
+// if (currentYear === 2023) console.log('Welcome to 2023!!!');
+// if (currentYear !== 2024) console.log('Leaving in the past!');
+
+// let thisYear = '2023';
+// if (currentYear == 2023) console.log('Welcome to 2023 (String)!!!');
+
+// const fav = Number(prompt('Enter favorite number:'));
+// if (fav === 23) console.log('Cool!');
+
 // ASSIGNMENT
 // equal operator: it is execute after the value assignment
 let x = 10 + 5; // 15, equal operator will assign the value after the sum
