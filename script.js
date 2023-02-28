@@ -37,7 +37,7 @@ let currentYear = 2023;
 // if (js === 'amazing') alert('Javascript is FUN!');
 // if (js === 'amazing') console.log('Javascript is FUN!');
 
-// Equality operators
+// EQUALITY
 // if (currentYear === 2023) console.log('Welcome to 2023!!!');
 // if (currentYear !== 2024) console.log('Leaving in the past!');
 
@@ -46,6 +46,23 @@ let currentYear = 2023;
 
 // const fav = Number(prompt('Enter favorite number:'));
 // if (fav === 23) console.log('Cool!');
+
+// LOGICAL
+// The and(&&), or() & not() operators
+const licence = true;
+const vision = true;
+const tired = false;
+
+console.log(licence && vision);
+console.log(licence || vision);
+console.log(licence && !vision);
+
+const canDrive = licence && vision && !tired;
+if (canDrive) {
+  console.log('Hurra! buy a car now 🥳');
+} else {
+  console.log('Sorry! you can not drive.');
+}
 
 // ASSIGNMENT
 // equal operator: it is execute after the value assignment
