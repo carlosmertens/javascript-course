@@ -184,3 +184,29 @@ ageOverLimit = 21;
 // } else {
 //   console.log('transfer is undefined');
 // }
+
+/* ********* SWITCH STATEMENTS ********** */
+
+const day = 'saturday';
+
+switch (day) {
+  case 'monday':
+    console.log(day, ' is the first day of the week');
+    break;
+  case 'tuesday':
+    console.log(day, 'is the second day of the week');
+    break;
+  case 'wednesday':
+    console.log(day, 'is the third day of the week');
+    break;
+  case 'thursday':
+    console.log(day, 'is the fourth day of the week');
+    break;
+  case 'friday':
+  case 'saturday':
+  case 'sunday':
+    console.log(day, 'is the weekend');
+    break;
+  default:
+    console.log('Not a valid day');
+}
