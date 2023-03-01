@@ -53,15 +53,15 @@ const licence = true;
 const vision = true;
 const tired = false;
 
-console.log(licence && vision);
-console.log(licence || vision);
-console.log(licence && !vision);
+// console.log(licence && vision);
+// console.log(licence || vision);
+// console.log(licence && !vision);
 
 const canDrive = licence && vision && !tired;
 if (canDrive) {
-  console.log('Hurra! buy a car now 🥳');
+  // console.log('Hurra! buy a car now 🥳');
 } else {
-  console.log('Sorry! you can not drive.');
+  // console.log('Sorry! you can not drive.');
 }
 
 // ASSIGNMENT
