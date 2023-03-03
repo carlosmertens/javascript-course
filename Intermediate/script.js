@@ -20,3 +20,10 @@ function mixJuicer(fruitOne, fruitTwo, fruitThree) {
 }
 // Invoke function with arguments
 console.log(mixJuicer('apples', 'carrots', 'oranges'));
+
+// FUNCTION EXPRESSIONS
+const calculateAge = function (yearBorn) {
+  const currentYear = 2023;
+  return currentYear - yearBorn;
+};
+const myAge = calculateAge(1980);
