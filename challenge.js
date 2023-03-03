@@ -1,4 +1,4 @@
-/*
+/* ///////////////////////////////
  ********** Coding Challenge #1 **********
 
 Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula:
@@ -19,7 +19,7 @@ m tall.
 
 GOOD LUCK � 
 */
-console.log('***** Coding Challenge #1 *****');
+console.log('***** CODING CHALLENGE 1 *****');
 
 // Task 1:
 // const markMass = 78;
@@ -36,13 +36,13 @@ const johnHeight = 1.76;
 const markBMI = markMass / markHeight ** 2;
 const johnBMI = johnMass / (johnHeight * johnHeight);
 
-console.log({ markBMI }, { johnBMI });
+// console.log({ markBMI }, { johnBMI });
 
 // Task 3
 const markHigherBMI = markBMI > johnBMI;
-console.log({ markHigherBMI });
+// console.log({ markHigherBMI });
 
-/*
+/* ///////////////////////////////
 Coding Challenge #2
 Use the BMI example from Challenge #1, and the code you already wrote, and improve it.
 Your tasks:
@@ -50,15 +50,15 @@ Your tasks:
 2. Use a template literal to include the BMI values in the outputs.Example:"Mark's BMI (28.3) is higher than John's (23.9)!"
 Hint: Use an if/else statement 😉 GOOD LUCK 😀
 */
-console.log('***** Coding Challenge #2 *****');
+console.log('***** CODING CHALLENGE 2 *****');
 
-if (markHigherBMI) {
-  console.log(`Mark's BMI (${markBMI}) is higher than John's (${johnBMI})!`);
-} else {
-  console.log(`John's BMI (${johnBMI}) is higher than Marks's (${markBMI})!`);
-}
+// if (markHigherBMI) {
+//   console.log(`Mark's BMI (${markBMI}) is higher than John's (${johnBMI})!`);
+// } else {
+//   console.log(`John's BMI (${johnBMI}) is higher than Marks's (${markBMI})!`);
+// }
 
-/*
+/* ///////////////////////////////
 Coding Challenge #3
 There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins a trophy!
 Your tasks:
@@ -74,7 +74,7 @@ Test data:
 GOOD LUCK 😀
 */
 
-console.log('***** Coding Challenge #3 *****');
+console.log('***** CODING CHALLENGE 3 *****');
 
 // Dolphins scores
 const dolphinScore1 = 97;
@@ -87,20 +87,41 @@ const koalaScore3 = 123;
 
 // TASK 1
 // Dolphins average
-const dolphinAverage = (dolphinScore1 + dolphinScore2 + dolphinScore3) / 3;
-console.log({ dolphinAverage });
+// const dolphinAverage = (dolphinScore1 + dolphinScore2 + dolphinScore3) / 3;
+// console.log({ dolphinAverage });
 
 // Koalas average
-const koalaAverage = (koalaScore1 + koalaScore2 + koalaScore3) / 3;
-console.log({ koalaAverage });
+// const koalaAverage = (koalaScore1 + koalaScore2 + koalaScore3) / 3;
+// console.log({ koalaAverage });
 
 // TASK 2
-if (dolphinAverage < 100 && koalaAverage < 100) {
-  console.log('We do not have a team with more than 100 points!!');
-} else if (dolphinAverage === koalaAverage) {
-  console.log('We have a draw!!!');
-} else if (dolphinAverage > koalaAverage) {
-  console.log('Dolphin wins!!!');
-} else {
-  console.log('Koalas win!!!');
-}
+// if (dolphinAverage < 100 && koalaAverage < 100) {
+//   console.log('We do not have a team with more than 100 points!!');
+// } else if (dolphinAverage === koalaAverage) {
+//   console.log('We have a draw!!!');
+// } else if (dolphinAverage > koalaAverage) {
+//   console.log('Dolphin wins!!!');
+// } else {
+//   console.log('Koalas win!!!');
+// }
+
+/* ///////////////////////////////
+Coding Challenge #4
+Steven wants to build a very simple tip calculator for whenever he goes eating in a restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
+Your tasks:
+1. Calculate the tip, depending on the bill value. Create a variable called 'tip' for this. It's not allowed to use an if/else statement 😅 (If it's easier for you, you can start with an if/else statement, and then try to convert it to a ternary operator!)
+2. Print a string to thec onsole containing the bill value,the tip,and the final value (bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value 316.25”
+Test data:
+§ Data 1: Test for bill values 275, 40 and 430 Hints:
+§ To calculate 20% of a value, simply multiply it by 20/100 = 0.2 § Value X is between 50 and 300, if it's>= 50 && <= 300😉
+GOOD LUCK 😀
+*/
+console.log('***** CODING CHALLENGE 4 *****');
+
+const bill = 1000;
+
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+console.log({ tip });
+console.log(
+  `The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`
+);
