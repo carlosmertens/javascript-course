@@ -86,7 +86,7 @@ x++; // x = x + 1
 //
 
 // NUMBERS: "floating point numbers" -> use for decimals and integers
-let age = 20;
+let age = 21;
 let height = 1.65;
 
 // STRING: use for text
@@ -189,24 +189,31 @@ ageOverLimit = 21;
 
 const day = 'saturday';
 
-switch (day) {
-  case 'monday':
-    console.log(day, ' is the first day of the week');
-    break;
-  case 'tuesday':
-    console.log(day, 'is the second day of the week');
-    break;
-  case 'wednesday':
-    console.log(day, 'is the third day of the week');
-    break;
-  case 'thursday':
-    console.log(day, 'is the fourth day of the week');
-    break;
-  case 'friday':
-  case 'saturday':
-  case 'sunday':
-    console.log(day, 'is the weekend');
-    break;
-  default:
-    console.log('Not a valid day');
-}
+// switch (day) {
+//   case 'monday':
+//     console.log(day, ' is the first day of the week');
+//     break;
+//   case 'tuesday':
+//     console.log(day, 'is the second day of the week');
+//     break;
+//   case 'wednesday':
+//     console.log(day, 'is the third day of the week');
+//     break;
+//   case 'thursday':
+//     console.log(day, 'is the fourth day of the week');
+//     break;
+//   case 'friday':
+//   case 'saturday':
+//   case 'sunday':
+//     console.log(day, 'is the weekend');
+//     break;
+//   default:
+//     console.log('Not a valid day');
+// }
+
+/* ********* THE CONDITIONAL (TERNARY) OPERATOR ********** */
+// condition ? if statement : else statement
+
+const drink = age >= ageOverLimit ? 'wine 🍷' : 'milk 🥛';
+console.log({ drink });
+console.log(`I will drink ${age >= ageOverLimit ? 'wine 🍷' : 'milk 🥛'}`);
