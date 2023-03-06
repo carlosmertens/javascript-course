@@ -1,11 +1,13 @@
 'use strict';
 /* ********** STRICT MODE ********** */
+
 // Help us avoid bugs in the code
 // Help us avoid rerserve variable names
 
 /* ********** FUNCTIONS ********** */
 
 // FUNCTION DECLARATION
+
 // Can be used before being declare
 logger();
 function logger() {
@@ -24,6 +26,7 @@ function mixJuicer(fruitOne, fruitTwo, fruitThree) {
 console.log(mixJuicer('apples', 'carrots', 'oranges'));
 
 // FUNCTION EXPRESSIONS
+
 // A function value stored in a variable
 const calculateAge = function (yearBorn) {
   const currentYear = 2023;
@@ -31,7 +34,8 @@ const calculateAge = function (yearBorn) {
 };
 const myAge = calculateAge(1980);
 
-// ARROW FUNCTION
+// ARROW FUNCTIONS
+
 // arrow functions do noit get "this" keyword
 const ageBy2050 = (yearBorn) => 2050 - yearBorn;
 console.log(ageBy2050(1980));
@@ -50,3 +54,61 @@ const yearsUntilRetirement = (yearBorn, retirementAge) => {
   }
 };
 console.log(yearsUntilRetirement(1950, 65));
+
+/* ********** DATA STRUCTURE ********** */
+
+// ARRAYS DECLARATION
+
+// Create arrays with literal syntax and with new Array() function
+const friends = ['Hermes', 'Jose', 'Felipe', 'Romeo'];
+const years = new Array(1980, 1984, 1987, 2023);
+const firstName = 'Carlos';
+const myInfo = [firstName, 'Mertens', years[0], friends];
+console.log(myInfo);
+// Arrays start with index 0
+console.log(friends[0]);
+console.log(years[1]);
+
+// ARRAYS MUTATION
+
+console.log(friends);
+friends[2] = 'Fabian';
+console.log(friends);
+
+// ARRAYS PROPERTIES
+console.log(years.length); // Number of elements in the array
+// Get last element in the array
+console.log(friends[friends.length - 1]);
+
+// ARRAY METHODS
+
+// Add element to the end of the array, push() always return new lenght
+console.log(years);
+years.push(2050);
+console.log(years);
+
+// Add element to the beginning of the array, also returns the lenght is needed
+years.unshift(1950);
+console.log(years);
+
+// Remove and return last element
+const poppedElement = years.pop();
+console.log(years);
+console.log({ poppedElement });
+
+// Remove and return first element
+const shiftedElement = years.shift();
+console.log(years);
+console.log({ shiftedElement });
+
+// Return index of element, If doesn't exist, returns -1
+console.log(myInfo.indexOf('Mertens'));
+console.log(myInfo.indexOf('Moreno'));
+
+// Check if elements exist in the array, returns true or false
+console.log(myInfo.includes('Mertens'));
+console.log(myInfo.includes('Moreno'));
+
+if (myInfo.includes(firstName)) {
+  console.log('My first name is', myInfo[0]);
+}
