@@ -218,6 +218,14 @@ for (let i = myInfo.length - 1; i >= 0; i--) {
 }
 
 // Loop inside a loop
+for (let i = 1; i <= 3; i++) {
+  console.log(i);
+  for (let j = 1; j <= 3; j++) {
+    console.log(i, j);
+  }
+}
+
+// Conditional loop inside a loop
 console.log('>>>');
 for (let i = 0; i < myInfo.length; i++) {
   if (typeof myInfo[i] === 'object') {
@@ -228,4 +236,22 @@ for (let i = 0; i < myInfo.length; i++) {
     continue;
   }
   console.log(myInfo[i]);
+}
+
+let count = 1;
+// WHILE LOOP
+while (count <= 4) {
+  console.log({ count });
+  count++;
+}
+
+// Exercise rolling dice until 6
+let dice = Math.trunc(Math.random() * 6 + 1);
+// If the first try is 6 it will not enter the while loop
+console.log({ dice });
+while (dice !== 6) {
+  console.log('You rolled ', dice);
+  dice = Math.trunc(Math.random() * 6 + 1);
+  if (dice === 6)
+    console.log('A 6 was rolled and your are out of the while loop!');
 }
