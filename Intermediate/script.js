@@ -63,9 +63,9 @@ console.log('>>> ARRAYS');
 
 // Create arrays with literal syntax and with new Array() function
 const friends = ['Hermes', 'Jose', 'Felipe', 'Romeo'];
-const years = new Array(1980, 1984, 1987, 2023);
+const years = new Array(1980, 1984, 1987, 2023, 2050);
 const firstName = 'Carlos';
-const myInfo = [firstName, 'Mertens', years[0], friends];
+const myInfo = [firstName, 'Mertens', years[0], friends, 'Berlin'];
 // console.log(myInfo);
 
 // Arrays start with index 0
@@ -141,11 +141,11 @@ const profile = {
     }. He has ${this.hasDriverLicense ? 'a' : 'not'} driver license`;
   },
 };
-console.log(profile);
+// console.log(profile);
 
 // Getting values out
-console.log(profile['firstName']); // Inside [] goes an expression
-console.log(profile.lastName);
+// console.log(profile['firstName']); // Inside [] goes an expression
+// console.log(profile.lastName);
 
 // const res = prompt('Choose: first name, last name, age, friends');
 // profile[res] ? console.log(profile[res]) : console.log('Wrong option!');
@@ -153,23 +153,79 @@ console.log(profile.lastName);
 // Add key and value to the object
 profile.job = 'Developer';
 profile['location'] = 'Berlin';
-console.log(profile);
+// console.log(profile);
 
 // Exercise
 // Display: "x has x friends and the best friend is x"
-
-console.log(
-  `${profile.firstName} has ${profile.friends.length} friends and his best friend is ${profile.friends[1]}`
-);
+// console.log(
+//   `${profile.firstName} has ${profile.friends.length} friends and his best friend is ${profile.friends[1]}`
+// );
 
 // OBJECT METHODS
 
 // Create method to calculate age using this keyword
-
 // console.log(profile.calcAge());
-console.log(profile['calcAge']()); // Only calculate age once
-console.log(profile);
+// console.log(profile['calcAge']()); // Only calculate age once
+// console.log(profile);
 
 // Exercise
 // Create a method getSummary
-console.log(profile.getSummary());
+// console.log(profile.getSummary());
+
+/* ********** ITERATIONS ********** */
+// Iterations are Control Structure like "if statements"
+console.log('>>> FOR LOOPS');
+
+// FOR LOOP
+for (let i = 1; i <= 3; i++) {
+  console.log(`Lifting weights series ${i}`);
+}
+
+// Looping through arrays
+console.log(myInfo);
+const myInfoTypes = [];
+for (let i = 0; i < myInfo.length; i++) {
+  myInfoTypes.push(typeof myInfo[i]);
+}
+console.log(myInfoTypes);
+
+// Exercise claculate how many years left until 2050
+console.log(years);
+const yearsLopped = [];
+for (let i = 0; i < years.length; i++) {
+  yearsLopped.push(2050 - years[i]);
+}
+console.log(yearsLopped);
+
+// CONTINUE (skip current iteration) BREAK (exit loop)
+
+// Exercise to print only srtings in the array
+for (let i = 0; i < myInfo.length; i++) {
+  if (typeof myInfo[i] !== 'string') continue;
+  console.log(myInfo[i]);
+}
+
+// Exercise to print until we find an array
+for (let i = 0; i < myInfo.length; i++) {
+  if (typeof myInfo[i] === 'object') break;
+  console.log(myInfo[i]);
+}
+
+// Loop backwards
+for (let i = myInfo.length - 1; i >= 0; i--) {
+  // console.log({ i });
+  console.log(myInfo[i]);
+}
+
+// Loop inside a loop
+console.log('>>>');
+for (let i = 0; i < myInfo.length; i++) {
+  if (typeof myInfo[i] === 'object') {
+    // console.log(myInfo[i].length);
+    for (let j = 0; j < myInfo[i].length; j++) {
+      console.log(myInfo[i][j]);
+    }
+    continue;
+  }
+  console.log(myInfo[i]);
+}
