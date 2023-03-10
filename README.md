@@ -48,6 +48,19 @@ The intermediate learning material:
 - While loops
 - Challenges
 
+### Practices (Folder)
+
+There are problems.js and challenges.js files with the code of the learning training and notes.
+
+The js files are link to the index.html and can be run on the browser with Live-Server from [node.js](https://nodejs.org/en/) or from your [VS Code](https://code.visualstudio.com/) editor extension.
+
+All results and tests can be display on the browser console.
+
+The practices learning problems and challenges are to learn find solutions and get help from Google, StackOverflow and MDN.
+
+- Calculate amplitude from an array of temperatures
+- Debuging with console and breakpoints
+
 ## Instructor
 
 Jonas Schmedtmann
