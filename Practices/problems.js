@@ -65,3 +65,22 @@ const amplitute = calcTempsAmplitute(
   ['error', -1, -2, 0]
 );
 console.log({ amplitute });
+
+/* ///////////////////////////////
+ ********** CODING PROBLEM #3 ********** 
+
+Create function that convert any tempeture into Kelvin.
+- To convert to Kelving just need to add 273
+*/
+
+function measureKelvin() {
+  const measurement = {
+    type: 'temp',
+    untit: 'celsius',
+    // value: prompt('Degrees celsius:'),
+    value: '10',
+  };
+  return Number(measurement.value) + 273;
+}
+
+console.log(measureKelvin());

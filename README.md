@@ -60,6 +60,7 @@ The practices learning problems and challenges are to learn find solutions and g
 
 - Calculate amplitude from an array of temperatures
 - Debuging with console and breakpoints
+- Print forcast strings (concatenation) from an array of tempeture
 
 ## Instructor
 
