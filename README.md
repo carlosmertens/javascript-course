@@ -1,10 +1,16 @@
-# javascript-course
+# JAVASCRIPT FUNDAMENTALS
 
-Learn JS with Jonas Schmedtmann
+Learn JS with Jonas Schmedtmann course
 
-## Course
+## Resource
 
-The Complete JavaScript Course 2023: From Zero to Expert!
+### Platform
+
+[Udemy](https://www.udemy.com/)
+
+### Course title
+
+[The Complete JavaScript Course 2023: From Zero to Expert!](https://www.udemy.com/course/the-complete-javascript-course/)
 
 ## Learning fundamentals
 
@@ -12,9 +18,9 @@ The Complete JavaScript Course 2023: From Zero to Expert!
 
 There is a scrips.js, assignments.js and challenge.js files with the code of the learning concepts and notes.
 
-The js files are link to the index.html and can be requested on the browser.
+The js files are link to the index.html and can be run on the browser with Live-Server from [node.js](https://nodejs.org/en/) or from your [VS Code](https://code.visualstudio.com/) editor extension.
 
-All results can be display on the browser console.
+All results and tests can be display on the browser console.
 
 The beginner learning material:
 
@@ -29,9 +35,9 @@ The beginner learning material:
 
 There is a scrips.js and challenge.js files with the code of the learning concepts and notes.
 
-The js files are link to the index.html and can be requested on the browser.
+The js files are link to the index.html and can be run on the browser with Live-Server from [node.js](https://nodejs.org/en/) or from your [VS Code](https://code.visualstudio.com/) editor extension.
 
-All results can be display on the browser console.
+All results and tests can be display on the browser console.
 
 The intermediate learning material:
 
@@ -46,3 +52,7 @@ The intermediate learning material:
 
 Jonas Schmedtmann
 Web Developer, Designer, and Teacher
+
+## Author
+
+- **Carlos Mertens** - _Mertens-Applications_
