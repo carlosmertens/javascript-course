@@ -1,7 +1,6 @@
 'use strict';
 
 /* ////////// SCOPE ///////// */
-
 console.log('////////// SCOPE /////////');
 
 // EXAMPLE TO BE ANALYZED
@@ -86,4 +85,50 @@ function calcAge(birthYear) {
 const firstName = 'Carlos';
 calcAge(1980);
 
-/* ////////// HOISTING & TDZ ///////// */
+/* ////////// HOISTING & TDZ (Temporal Dead Zone) ///////// */
+console.log('////////// HOISTING & TDZ /////////');
+
+// VARIABLES HOISTING
+console.log(me); // Hoisted with undefined value
+// console.log(job); // Temporal Dead Zone
+// console.log(year); // TDZ
+
+var me = 'Carlos';
+let job = 'Developer';
+const year = 1980;
+
+// FUNCTION HOISTING
+console.log(addDeclaration(1, 2));
+// console.log(addExpression(1, 2));
+// console.log(addArrow(1, 2));
+// console.log(addVar(1, 2)); // Not a function
+console.log(addVar); // Undefined
+
+function addDeclaration(a, b) {
+  return a + b;
+}
+
+const addExpression = function (a, b) {
+  return a + b;
+};
+
+const addArrow = (a, b) => {
+  return a + b;
+};
+
+var addVar = function (a, b) {
+  return a + b;
+};
+
+// BUG EXAMPLE
+
+console.log(numProducts); // Will be hoisted with undefined value
+
+// Will be falsy eventhought it was declare with value 10
+if (!numProducts) deleteShoppingCart();
+
+var numProducts = 10;
+
+function deleteShoppingCart() {
+  console.log('All products deleted!');
+}
