@@ -48,6 +48,20 @@ The intermediate learning material:
 - While loops
 - Challenges
 
+### Advance (Folder)
+
+There is a scrips.js file with the code of the learning concepts and notes.
+
+The js file is link to the index.html and can be run on the browser with Live-Server from [node.js](https://nodejs.org/en/) or from your [VS Code](https://code.visualstudio.com/) editor extension.
+
+All results and tests can be display on the browser console.
+
+The intermediate learning material:
+
+- Scope
+- Hoisting and TDZ (Temporal Dead Zone)
+- "this" keyword
+
 ### Practices (Folder)
 
 There are problems.js and challenges.js files with the code of the learning training and notes.
