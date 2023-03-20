@@ -1,7 +1,7 @@
 'use strict';
 
 /* ////////// SCOPE ///////// */
-console.log('////////// SCOPE /////////');
+console.log('>>> SCOPE');
 
 // EXAMPLE TO BE ANALYZED
 
@@ -86,7 +86,7 @@ const firstName = 'Carlos';
 calcAge(1980);
 
 /* ////////// HOISTING & TDZ (Temporal Dead Zone) ///////// */
-console.log('////////// HOISTING & TDZ /////////');
+console.log('>>> HOISTING & TDZ');
 
 // VARIABLES HOISTING
 console.log(me); // Hoisted with undefined value
@@ -132,3 +132,43 @@ var numProducts = 10;
 function deleteShoppingCart() {
   console.log('All products deleted!');
 }
+
+/* ////////// THE THIS KEYWORD ///////// */
+console.log('>>> THE THIS KEYWORD');
+
+console.log('Global this:', this); // This will get the global window object
+
+// this keyword in functions
+function multNum(a, b) {
+  console.log('Function "this": ', this); // undefined in strict mode because there is not object to point at
+  return a * b;
+}
+multNum(2, 2);
+
+const mertens = {
+  firstName: 'Carlos',
+  lastName: 'Mertens',
+  printName: function () {
+    console.log(this.firstName, this.lastName);
+    console.log('Call this in method: ', this);
+  },
+};
+mertens.printName();
+
+// Method borrowing
+const jones = {
+  firstName: 'Rick',
+  lastName: 'Jones',
+};
+jones.printName = mertens.printName;
+console.log('Borrowed printName method: ', jones);
+jones.printName();
+
+// Arrow function does not have own this keyword
+const multNumArrow = (a, b) => {
+  console.log(a * b);
+  console.log(this); // Will point to the parent object
+};
+multNumArrow(2, 2);
+
+//
