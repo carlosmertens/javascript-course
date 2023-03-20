@@ -171,4 +171,52 @@ const multNumArrow = (a, b) => {
 };
 multNumArrow(2, 2);
 
-//
+/* ////////// REGULAR vs ARROW FUNCTIONS ///////// */
+console.log('>>> Regular vs Arrow functions');
+
+// this keyword will be point at global window with the arrow function
+// As a rule, never use arrow to define a method
+var myFirstName = 'GlobalName';
+
+const moreno = {
+  myFirstName: 'Edgar',
+  myLastName: 'Moreno',
+
+  logFirstName: function () {
+    console.log(`Hello ${this.myFirstName}`);
+
+    const self = this; // Old solution to inherit this in a function
+    const logLastName = function () {
+      console.log(`Hello ${self.myLastName}`);
+    };
+    logLastName();
+
+    // Modern solution, arrow function will inherit this keyword from parent
+    const logName = () => console.log(`${this.myFirstName} ${this.myLastName}`);
+    logName();
+  },
+
+  // this will be from parent (var myFirstName)
+  printName: () => console.log(`Hello ${this.myFirstName}`),
+};
+moreno.logFirstName();
+moreno.printName();
+
+// Arguments keyword
+
+function sumNumbers(a, b, c) {
+  // check arguments keyword
+  console.log(arguments);
+  return a + b + c;
+}
+
+sumNumbers(1, 2, 3);
+
+// We can also call more arguments than the parameters
+sumNumbers(1, 2, 3, 4, 5);
+
+// Arrow function doea not have the arguments keywords
+const addNumbers = (a, b, c) => {
+  console.log(arguments);
+  return a + b + c;
+};
