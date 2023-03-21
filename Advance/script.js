@@ -220,3 +220,44 @@ const addNumbers = (a, b, c) => {
   console.log(arguments);
   return a + b + c;
 };
+
+/* ////////// PRIMITIVES vs OBJECTS ///////// */
+console.log('>>> Primitives vs objects');
+
+// Primitive types
+// Create memory on the Stack
+let age = 40;
+let oldAge = age; // it will copy the identifier's address
+age = 41; // it will not change oldAge but create a new address
+console.log({ age });
+console.log({ oldAge });
+
+// Object (reference) types
+// Create memory on the Heap
+const person1 = {
+  name: 'carlos',
+  age: 44,
+};
+
+const person2 = person1; // will copy reference to the Heap
+person2.age = 45; // it will change also person1
+
+console.log({ person1 });
+console.log({ person2 });
+
+// Copy objects and not the reference point using Object.assign()
+// creates only a shallow copy, means that if there is another object inside,
+// it will be pointing to the originals
+const maria = {
+  firstName: 'Maria',
+  lastName: 'Perez',
+  age: 27,
+  friends: ['pedro', 'john', 'jessica'],
+};
+
+const mariaCopy = Object.assign({}, maria);
+mariaCopy.age = 28;
+mariaCopy.friends.push('Alice');
+
+console.log({ maria });
+console.log({ mariaCopy });
