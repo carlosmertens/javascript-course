@@ -61,6 +61,20 @@ The intermediate learning material:
 - Scope
 - Hoisting and TDZ (Temporal Dead Zone)
 - "this" keyword
+- Regular vs Arrow functions
+- Primitive vs objects types
+
+### Data Structures (Folder)
+
+There is a scrips.js and challenge.js files with the code of the learning concepts and notes.
+
+The js files are link to the index.html and can be run on the browser with Live-Server from [node.js](https://nodejs.org/en/) or from your [VS Code](https://code.visualstudio.com/) editor extension.
+
+All results and tests can be display on the browser console.
+
+The data structures learning material:
+
+-
 
 ### Practices (Folder)
 
