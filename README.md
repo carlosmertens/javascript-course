@@ -74,7 +74,8 @@ All results and tests can be display on the browser console.
 
 The data structures learning material:
 
--
+- Destructure arrays and objects
+- The spread operator
 
 ### Practices (Folder)
 
