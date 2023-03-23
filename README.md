@@ -76,6 +76,7 @@ The data structures learning material:
 
 - Destructure arrays and objects
 - The spread operator
+- The rest operator (rest pattern and parameters)
 
 ### Practices (Folder)
 

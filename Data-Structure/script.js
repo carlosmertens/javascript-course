@@ -40,6 +40,12 @@ const restaurant = {
   makePasta: function (ing1, ing2, ing3) {
     console.log(`Pasta ordered with ${ing1}, ${ing2} and ${ing3}`);
   },
+
+  // Method to display the use of rest operator
+  orderPizza: function (mainIng, ...otherIng) {
+    console.log(`Pizza ordered with ${mainIng}`);
+    console.log(`Other toppings:`, otherIng);
+  },
 };
 
 /* ////////// DESTRUCTURING ARRAYS ///////// */
@@ -183,6 +189,47 @@ restaurant.makePasta(...ingredients);
 const newRestaurant = { owner: 'Mertens', ...restaurant, yelpStar: 4 };
 console.log(newRestaurant);
 console.log(restaurant); // note that original object was not changed
+
+/* ////////// REST PATTERN ///////// */
+console.log('>>> REST PATTERN');
+
+// Rest operator works inverse from spread operator
+// Rest pattern helps packing/condensing elements
+
+const arr3 = [0, 1, 2, 3, 4, 5];
+const [restA, restB, ...restOthers] = arr3;
+console.log({ restA }, { restB }, { restOthers });
+
+// Using Rest and Spread operators at the same time
+// note that literally condense the rest after las variable
+// in the following example, Bruschetta will be lost
+const [item1, , item2, ...otherFoods] = [
+  ...restaurant.starterMenu,
+  ...restaurant.mainMenu,
+];
+console.log(item1, item2, otherFoods);
+
+// Rest pattern with Objects
+const { sat, ...weekday } = restaurant.openingHours;
+console.log({ sat });
+console.log({ weekday });
+
+// Rest pattern with functions - REST PARAMETERS
+function add(...numbers) {
+  // console.log(numbers);
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  console.log(sum);
+}
+add(2, 3);
+add(5, 5, 5);
+add(1, 1, 2, 2, 4, 5, 10);
+add(...arr3);
+
+// Example with restaurant object
+restaurant.orderPizza('tomato sauce', 'cheese', 'ham', 'pineapple');
 
 // CASE 2:
 const flights =
