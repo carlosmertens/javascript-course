@@ -1,4 +1,4 @@
-# JAVASCRIPT FUNDAMENTALS
+# JS FUNDAMENTALS
 
 Learn JS with Jonas Schmedtmann course
 
