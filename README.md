@@ -79,6 +79,7 @@ The data structures learning material:
 - Rest Operator (rest pattern and parameters)
 - Short Circuiting (|| and &&)
 - Nullish Coalescing Operator
+- Logical Assignment Operators
 
 ### Practices (Folder)
 

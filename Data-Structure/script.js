@@ -278,6 +278,45 @@ restaurant.numGuests = 0;
 const guests3 = restaurant.numGuests ?? 10;
 console.log({ guests3 });
 
+/* ////////// LOGICAL ASSIGNMENT OPERATORS ///////// */
+console.log('>>> LOGICAL ASSIGNMENT OPERATORS');
+
+const rest1 = {
+  name: 'Capri',
+  numGuests: 20,
+};
+const rest2 = {
+  name: 'Roma',
+  owner: 'Carlos Mertens',
+  workers: 0,
+};
+
+// OR ASSIGNMENT OPERATOR
+// Assign the value if it is falsy
+// If rest1.numGuests exist with 0, will create a bug because 0 is falsy
+rest1.numGuests ||= 15; // rest1.numGuests = rest1.numGuests || 15;
+rest2.numGuests ||= 15; // rest2.numGuests = rest2.numGuests || 15;
+
+// console.log(rest1);
+// console.log(rest2);
+
+// NULLISH ASSIGNMENT OPERATOR
+// Assign the value if it is nullish (null or undefined)
+rest1.workers ??= 2; // rest1.workers = rest1.workers || 15;
+rest2.workers ??= 2; // rest2.workers = rest2.workers || 15;
+
+// console.log(rest1);
+// console.log(rest2);
+
+// AND ASSIGNMENT OPERATOR
+// Assign the value if it is truety
+rest1.owner &&= 'Anonymous'; // rest1.owner = rest1.owner && 'Anonymous';
+rest2.owner &&= 'Anonymous'; // rest2.owner = rest2.owner && 'Anonymous';
+console.log(rest1);
+console.log(rest2);
+
+//
+
 // CASE 2:
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
