@@ -231,6 +231,42 @@ add(...arr3);
 // Example with restaurant object
 restaurant.orderPizza('tomato sauce', 'cheese', 'ham', 'pineapple');
 
+/* ////////// SHORT CIRCUITING ///////// */
+console.log('>>> SHORT CIRCUITING');
+
+// Short circuiting evaluation with || (or opertor) takes the first
+// true value and return it
+console.log(3 || 'carlos');
+console.log('' || 'carlos');
+console.log(true || 1);
+console.log(undefined || null);
+console.log(null || undefined);
+console.log(undefined || 0 || '' || 'Hello' || null || 23);
+console.log(false || false);
+
+// Use case
+// note that if restaurant.numGuests = 0, will create a bug
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log({ guests1 });
+
+// it will short circuit if false to the next statement
+const guests2 = restaurant.numGuests || 10;
+console.log({ guests2 });
+
+// Short circuiting evaluation with && (and opertor) takes the first
+// falsy value and return it
+console.log(0 && true);
+console.log('object' && 0 && 1);
+console.log(null && 'carlos');
+
+// Use case
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('ham', 'pineaple', 'green pepper');
+}
+
+// it will short circuit if true to next statement
+restaurant.orderPizza && restaurant.orderPizza('ham', 'pineaple');
+
 // CASE 2:
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
