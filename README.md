@@ -74,9 +74,11 @@ All results and tests can be display on the browser console.
 
 The data structures learning material:
 
-- Destructure arrays and objects
-- The spread operator
-- The rest operator (rest pattern and parameters)
+- Destructure Arrays and Objects
+- Spread Operator
+- Rest Operator (rest pattern and parameters)
+- Short Circuiting (|| and &&)
+- Nullish Coalescing Operator
 
 ### Practices (Folder)
 

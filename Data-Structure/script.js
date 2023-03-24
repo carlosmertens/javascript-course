@@ -246,6 +246,7 @@ console.log(false || false);
 
 // Use case
 // note that if restaurant.numGuests = 0, will create a bug
+
 const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
 console.log({ guests1 });
 
@@ -266,6 +267,16 @@ if (restaurant.orderPizza) {
 
 // it will short circuit if true to next statement
 restaurant.orderPizza && restaurant.orderPizza('ham', 'pineaple');
+
+/* ////////// NULLISH COALESCING OPERATOR ///////// */
+console.log('>>> NULLISH COALESCING OPERATOR');
+
+// ?? operator was introduce on ES2020
+// check for nullish values (null and undefined) and not falsy values
+
+restaurant.numGuests = 0;
+const guests3 = restaurant.numGuests ?? 10;
+console.log({ guests3 });
 
 // CASE 2:
 const flights =
