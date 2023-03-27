@@ -18,6 +18,8 @@ Test data for 6.: First, use players 'Davies', 'Muller', 'Lewandowski' and 'Kimm
 GOOD LUCK 😀
 */
 
+console.log('***** CODING CHALLENGE 1 *****');
+
 const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',

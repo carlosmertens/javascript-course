@@ -315,7 +315,18 @@ rest2.owner &&= 'Anonymous'; // rest2.owner = rest2.owner && 'Anonymous';
 console.log(rest1);
 console.log(rest2);
 
-//
+/* ////////// FOR OF LOOP ///////// */
+console.log('>>> FOR OF LOOP');
+
+// Iterate Array with For Of loop
+for (const item of menuFull) console.log('Item:', item);
+
+// Get index with For Of loop
+for (const item of menuFull.entries()) console.log(item);
+
+for (const [i, item] of menuFull.entries()) {
+  console.log(`${i}: ${item}`);
+}
 
 // CASE 2:
 const flights =
