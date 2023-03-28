@@ -80,6 +80,9 @@ The data structures learning material:
 - Short Circuiting (|| and &&)
 - Nullish Coalescing Operator
 - Logical Assignment Operators
+- For Of Loops
+- Enhanced Object Literals
+- Optional Chaining (?)
 
 ### Practices (Folder)
 

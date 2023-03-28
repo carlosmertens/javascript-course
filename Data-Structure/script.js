@@ -328,6 +328,38 @@ for (const [i, item] of menuFull.entries()) {
   console.log(`${i}: ${item}`);
 }
 
+/* ////////// ENHANCED OBJECT LITERALS ///////// */
+console.log('>>> ENHANCED OBJECT LITERALS');
+
+const animals = {
+  fox: 3,
+  camel: 2,
+  tiger: 1,
+};
+
+const week = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+const zoo = {
+  name: 'Berlin Zoo',
+  address: 'Thatever Street',
+  // Case1: don't need to declare variable name and value
+  animals,
+  // Case2: Method declaration simplified
+  buyTicket(num) {
+    console.log(`Confirmed! You have bought ${num} tickets`);
+    console.log(this);
+  },
+  // Case3: we can compute on the property name
+  daysOpen: {
+    [week[0]]: '8 - 18',
+    [week[2]]: '8 - 18',
+    [`day-${7 - 2}`]: '8 - 18',
+    [week[6]]: '8 - 18',
+  },
+};
+
+zoo.buyTicket(2);
+
 // CASE 2:
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
