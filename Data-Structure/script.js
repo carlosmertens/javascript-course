@@ -357,8 +357,45 @@ const zoo = {
     [week[6]]: '8 - 18',
   },
 };
-
 zoo.buyTicket(2);
+
+/* ////////// OPTIONAL CHAINING (?) ///////// */
+console.log('>>> OPTIONAL CHAINING (?)');
+// We use when we do not know if the property exist.
+// ? will check if what is to the left exist
+// If it does not exist, will return undefine but not error
+
+// Normal wait to check and avoid error
+if (restaurant.openingHours && restaurant.openingHours.mon) {
+  console.log(restaurant.openingHours.mon.open);
+} else {
+  console.log('Restaurant is not open on Monday');
+}
+
+// Optional Chaining
+if (restaurant.openingHours?.mon?.open) {
+  console.log(restaurant.openingHours.mon.open);
+} else {
+  console.log('Restaurant is not open on Monday');
+}
+
+// Real world example
+for (const day of week) {
+  const open = restaurant.openingHours[day]?.open ?? 'close';
+  console.log(`${day}: Restaurant is open at: ${open}`);
+}
+
+// Methods
+console.log(restaurant.order?.(1, 2) ?? 'There was an error with your request');
+
+// Arrays
+const users = [
+  { name: 'Carlos', email: 'carlos@test.com' },
+  { name: 'Nicole' },
+];
+
+console.log(users[0]?.name ?? 'No name found!');
+console.log(users[1]?.email ?? 'No email found!');
 
 // CASE 2:
 const flights =
