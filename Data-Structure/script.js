@@ -397,6 +397,38 @@ const users = [
 console.log(users[0]?.name ?? 'No name found!');
 console.log(users[1]?.email ?? 'No email found!');
 
+/* ////////// LOOPING OBJECTS ///////// */
+console.log('>>> LOOPING OBJECTS');
+
+// We can loop by keys (property names), values and entries.
+
+// Keys:
+const daysOpenKeys = Object.keys(restaurant.openingHours);
+console.log(daysOpenKeys);
+
+// Values
+const daysOpenValues = Object.values(restaurant.openingHours);
+console.log(daysOpenValues);
+
+// Entries
+const daysOpenEntries = Object.entries(restaurant.openingHours);
+console.log(daysOpenEntries);
+
+// Use case
+let strMessage = `We are open ${daysOpenKeys.length} day(s): `;
+for (const days of daysOpenKeys) {
+  strMessage += ` ${days}`;
+}
+console.log(strMessage);
+
+// Use case with looping and destructuring
+for (const [day, { open, close }] of daysOpenEntries) {
+  // const day = entry[0];
+  // const open = entry[1].open;
+  // const close = entry[1].close;
+  console.log(`On ${day}, we open at ${open} and close at ${close}`);
+}
+
 // CASE 2:
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
