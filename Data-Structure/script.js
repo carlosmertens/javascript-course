@@ -347,7 +347,6 @@ const zoo = {
   // Case2: Method declaration simplified
   buyTicket(num) {
     console.log(`Confirmed! You have bought ${num} tickets`);
-    console.log(this);
   },
   // Case3: we can compute on the property name
   daysOpen: {
