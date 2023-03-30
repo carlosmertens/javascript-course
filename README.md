@@ -83,6 +83,7 @@ The data structures learning material:
 - For Of Loops
 - Enhanced Object Literals
 - Optional Chaining (?)
+- Sets
 
 ### Practices (Folder)
 
