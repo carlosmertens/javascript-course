@@ -84,6 +84,8 @@ The data structures learning material:
 - Enhanced Object Literals
 - Optional Chaining (?)
 - Sets
+- Maps
+  Strings
 
 ### Practices (Folder)
 
