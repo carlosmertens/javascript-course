@@ -66,7 +66,7 @@ The intermediate learning material:
 
 ### Data Structures (Folder)
 
-There is a scrips.js and challenge.js files with the code of the learning concepts and notes.
+There is a scrips.js, strings.js and challenge.js files with the code of the learning concepts and notes.
 
 The js files are link to the index.html and can be run on the browser with Live-Server from [node.js](https://nodejs.org/en/) or from your [VS Code](https://code.visualstudio.com/) editor extension.
 
@@ -85,7 +85,7 @@ The data structures learning material:
 - Optional Chaining (?)
 - Sets
 - Maps
-  Strings
+- Strings
 
 ### Practices (Folder)
 
